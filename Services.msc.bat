@@ -1,5 +1,5 @@
 ::start= <boot|system|auto|demand|disabled|delayed-auto>
-TITLE Fix My Windows 4.05.2022 05:26
+TITLE Service WinOptiMaze v0.1
 cls
 @echo off
 echo github.com/ny4rlk0/WinOptiMaze
