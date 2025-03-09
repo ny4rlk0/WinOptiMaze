@@ -197,7 +197,7 @@ sc config SNMPTrap start= auto
 sc config wercplsupport start= demand
 sc config SQLWriter start= auto
 sc config SSDPSRV start= demand
-sc config Steam Client Service start= demand
+sc config "Steam Client Service" start= demand
 sc config LanmanServer start= auto
 sc config defragsvc start= demand
 sc config OneSyncSvc_74353 start= auto
@@ -297,5 +297,4 @@ sc config wlpasvc start= demand
 sc config camsvc start= demand
 sc config RemoteAccess start= auto
 sc config TimeBrokerSvc start= demand
-::sc config  start= demand
 ::Kodu buraya yaz:: 
