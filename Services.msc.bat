@@ -13,6 +13,7 @@ if _%1_==_payload_  goto :payload
     echo UAC.ShellExecute "%~s0", "payload %~sdp0 %*", "", "runas", 1 >> "%vbs%"
     "%temp%\getadmin.vbs"
     del "%temp%\getadmin.vbs"
+    exit
 goto :eof
 
 :payload
@@ -297,4 +298,5 @@ sc config wlpasvc start= demand
 sc config camsvc start= demand
 sc config RemoteAccess start= auto
 sc config TimeBrokerSvc start= demand
+exit
 ::Kodu buraya yaz:: 
