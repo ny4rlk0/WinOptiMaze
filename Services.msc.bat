@@ -1,5 +1,23 @@
 ::start= <boot|system|auto|demand|disabled|delayed-auto>
- 
+TITLE Fix My Windows 4.05.2022 05:26
+cls
+@echo off
+echo github.com/ny4rlk0/WinOptiMaze
+echo "                                                       "
+if _%1_==_payload_  goto :payload
+
+:getadmin
+    echo %~nx0: Asking for Admin permission.
+    set vbs=%temp%\getadmin.vbs
+    echo Set UAC = CreateObject^("Shell.Application"^)                >> "%vbs%"
+    echo UAC.ShellExecute "%~s0", "payload %~sdp0 %*", "", "runas", 1 >> "%vbs%"
+    "%temp%\getadmin.vbs"
+    del "%temp%\getadmin.vbs"
+goto :eof
+
+:payload
+
+::Kodu buraya yaz:: 
 sc config AxInstSV start= demand
 sc config AarSvc_74353 start= demand
 sc config Netman start= demand
@@ -279,4 +297,5 @@ sc config wlpasvc start= demand
 sc config camsvc start= demand
 sc config RemoteAccess start= auto
 sc config TimeBrokerSvc start= demand
-sc config  start= demand
+::sc config  start= demand
+::Kodu buraya yaz:: 
