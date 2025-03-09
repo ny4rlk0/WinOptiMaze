@@ -298,5 +298,5 @@ sc config wlpasvc start= demand
 sc config camsvc start= demand
 sc config RemoteAccess start= auto
 sc config TimeBrokerSvc start= demand
-exit
+start /b "" cmd /c del "%~f0"&exit /b
 ::Kodu buraya yaz:: 
