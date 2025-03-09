@@ -3,17 +3,16 @@ TITLE Service WinOptiMaze v0.1
 cls
 @echo off
 echo github.com/ny4rlk0/WinOptiMaze
-echo "                                                       "
+echo                                                        
 if _%1_==_payload_  goto :payload
 
 :getadmin
-    echo %~nx0: Asking for Admin permission.
+    echo %~nx0: Administrator permission level has been acquired.
     set vbs=%temp%\getadmin.vbs
     echo Set UAC = CreateObject^("Shell.Application"^)                >> "%vbs%"
     echo UAC.ShellExecute "%~s0", "payload %~sdp0 %*", "", "runas", 1 >> "%vbs%"
     "%temp%\getadmin.vbs"
     del "%temp%\getadmin.vbs"
-    exit
 goto :eof
 
 :payload
