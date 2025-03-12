@@ -9,3 +9,7 @@ W.I.P. Windows optimization scripts.
 
 # NO Overclock CPU Patch
     curl -o NO_OC.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/NO_OC.bat &&start /b "" cmd /c NO_OC.bat &exit
+
+# Balanced Overclock CPU Patch 
+###  (For those still wants OC but doesn't like the push computer like a madman)
+    curl -o Balanced_OC.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Balanced_OC.bat &&start /b "" cmd /c Balanced_OC.bat &exit
