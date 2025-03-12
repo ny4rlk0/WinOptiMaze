@@ -4,7 +4,7 @@ Windows optimization scripts.
 <br>
 Windows optimasyon scriptleri.
 <br><b>Sağdaki kopyalama butonuna tıklayarak yapmak istediğiniz işlevin kodunu kopyalayıp komut satırına yapıştırın.</b>
-# Optimize Services.MSC
+# Optimize Services.MSC (Windows Servislerini Optimize Et)
     curl -o Services.msc.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Services.msc.bat &&start /b "" cmd /c Services.msc.bat &exit
 
 # Reset (Sıfırla) Windows Settings (Ayarları)
