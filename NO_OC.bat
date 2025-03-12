@@ -23,9 +23,9 @@ curl -o NO_OC_WinOptiMaze.pow https://raw.githubusercontent.com/ny4rlk0/WinOptiM
 curl -o Balanced_WinOptiMaze.pow https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Balanced_WinOptiMaze.pow
 powershell -command "([regex]::Matches((powercfg -list), 'GUID: ([\w-]+)') | ForEach-Object { $_.Groups[1].Value }) | ForEach-Object { powercfg -delete $_ }"
 regedit /s power_unlock.reg
-powercfg /import NO_OC_WinOptiMaze.pow
+powershell -command "powercfg /import NO_OC_WinOptiMaze.pow"
 timeout /t 1
-powercfg /import Balanced_WinOptiMaze.pow
+powershell -command "powercfg /import Balanced_WinOptiMaze.pow"
 for /f "tokens=4" %%f in ('powercfg -list ^| findstr /C:"NO_OC_WinOptiMaze"') do set GUID=%%f
 powercfg /S %GUID%
 pause
