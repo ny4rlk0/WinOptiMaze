@@ -1,9 +1,9 @@
 # WinOptiMaze
 Windows optimization scripts.
-<br><b>Copy Paste to CMD for </b>
+<br><b>Copy Paste to CMD for </b> ![IMG](https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/buton.png)
 <br>
 Windows optimasyon scriptleri.
-<br><b>Sağdaki kopyalama butonuna tıklayarak yapmak istediğiniz işlevin kodunu kopyalayıp komut satırına yapıştırın.</b>
+<br><b>Sağdaki kopyalama butonuna tıklayarak yapmak istediğiniz işlevin kodunu kopyalayıp komut satırına yapıştırın.</b> ![IMG](https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/buton.png)
 # Optimize Services.MSC (Windows Servislerini Optimize Et)
     curl -o Services.msc.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Services.msc.bat &&start /b "" cmd /c Services.msc.bat &exit
 
