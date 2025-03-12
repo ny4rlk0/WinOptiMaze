@@ -301,7 +301,7 @@ sc config TimeBrokerSvc start= demand
 curl -o power_unlock.reg https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/power_unlock.reg
 curl -o NO_OC_WinOptiMaze.pow https://github.com/ny4rlk0/WinOptiMaze/raw/refs/heads/main/NO_OC_WinOptiMaze.pow
 curl -o Balanced_WinOptiMaze.pow https://github.com/ny4rlk0/WinOptiMaze/raw/refs/heads/main/Balanced_WinOptiMaze.pow
-powershell "[regex]::Matches((powercfg -list), 'GUID: ([\w-]+)') | %{$_.Groups[1].Value}"
+powershell "[regex]::Matches((powercfg -list), 'GUID: ([\w-]+)') | % { powercfg -delete $_.Groups[1].Value }"
 regedit /s power_unlock.reg
 powercfg /import NO_OC_WinOptiMaze.pow
 powercfg /import Balanced_WinOptiMaze.pow
