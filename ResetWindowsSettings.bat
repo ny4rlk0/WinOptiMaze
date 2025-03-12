@@ -37,7 +37,7 @@ cls
 echo "Resetting Windows Store"
 wsreset
 wsreset /i
-timeout /t 7
+timeout /t 5
 taskkill /IM "WinStore.App.exe" /f
 cls
 echo "Resetting DNS Cache"
@@ -91,7 +91,8 @@ DISM /Online /Cleanup-Image /RestoreHealth
 cls
 echo "Resetting Theme"
 start /b "ThemeReset" "%HOMEDRIVE%\Windows\Resources\Themes\aero.theme"
-timeout /t 7
+timeout /t 5
+start /b "ThemeReset" "%HOMEDRIVE%\Windows\Resources\Themes\dark.theme"
 taskkill /IM "SystemSettings.exe" /f
 cls
 echo "Setting Powershell Restrictions to Secure State"
