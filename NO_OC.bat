@@ -20,9 +20,9 @@ goto :eof
 ::Kodu buraya yaz:: 
 curl -o power_unlock.reg https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/power_unlock.reg
 timeout /t 3
-curl -o NO_OC_WinOptiMaze.pow https://github.com/ny4rlk0/WinOptiMaze/raw/refs/heads/main/NO_OC_WinOptiMaze.pow
+curl -o NO_OC_WinOptiMaze.pow https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/NO_OC_WinOptiMaze.pow
 timeout /t 3
-curl -o Balanced_WinOptiMaze.pow https://github.com/ny4rlk0/WinOptiMaze/raw/refs/heads/main/Balanced_WinOptiMaze.pow
+curl -o Balanced_WinOptiMaze.pow https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Balanced_WinOptiMaze.pow
 timeout /t 3
 powershell -command "([regex]::Matches((powercfg -list), 'GUID: ([\w-]+)') | ForEach-Object { $_.Groups[1].Value }) | ForEach-Object { powercfg -delete $_ }"
 timeout /t 10
