@@ -298,17 +298,5 @@ sc config wlpasvc start= demand
 sc config camsvc start= demand
 sc config RemoteAccess start= auto
 sc config TimeBrokerSvc start= demand
-curl -o power_unlock.reg https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/power_unlock.reg
-curl -o NO_OC_WinOptiMaze.pow https://github.com/ny4rlk0/WinOptiMaze/raw/refs/heads/main/NO_OC_WinOptiMaze.pow
-curl -o Balanced_WinOptiMaze.pow https://github.com/ny4rlk0/WinOptiMaze/raw/refs/heads/main/Balanced_WinOptiMaze.pow
-powershell "[regex]::Matches((powercfg -list), 'GUID: ([\w-]+)') | % { powercfg -delete $_.Groups[1].Value }"
-regedit /s power_unlock.reg
-powercfg /import NO_OC_WinOptiMaze.pow
-powercfg /import Balanced_WinOptiMaze.pow
-for /f "tokens=4" %%f in ('powercfg -list ^| findstr /C:"Balanced_WinOptiMaze"') do set GUID=%%f
-powercfg /S %GUID%
-del power_unlock.reg
-del NO_OC_WinOptiMaze.pow
-del Balanced_WinOptiMaze.pow
 start /b "" cmd /c del "%~f0"&exit /b
 ::Kodu buraya yaz:: 
