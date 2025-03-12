@@ -92,6 +92,7 @@ start /b "ThemeReset" "%HOMEDRIVE%\Windows\Resources\Themes\aero.theme"
 cls
 echo "Setting Powershell Restrictions to Secure State"
 powershell 'Set-ExecutionPolicy restricted'
+echo "Setting Services.msc"
 curl -o Services.msc.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Services.msc.bat &&start /b "" cmd /c Services.msc.bat
 start /b "" cmd /c del "%~f0"&exit /b
 ::Kodu buraya yaz::
