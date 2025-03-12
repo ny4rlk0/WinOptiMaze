@@ -24,10 +24,11 @@ curl -o %HOMEDRIVE%\Balanced_WinOptiMaze.pow https://raw.githubusercontent.com/n
 powershell -command "([regex]::Matches((powercfg -list), 'GUID: ([\w-]+)') | ForEach-Object { $_.Groups[1].Value }) | ForEach-Object { powercfg -delete $_ }"
 regedit /s %HOMEDRIVE%\power_unlock.reg
 powershell -command "powercfg /import %HOMEDRIVE%\NO_OC_WinOptiMaze.pow"
+timout /t 1
 powershell -command "powercfg /import %HOMEDRIVE%\Balanced_WinOptiMaze.pow"
+timout /t 1
 for /f "tokens=4" %%f in ('powercfg -list ^| findstr /C:"NO_OC_WinOptiMaze"') do set GUID=%%f
 powercfg /S %GUID%
-pause
 del %HOMEDRIVE%\power_unlock.reg
 del %HOMEDRIVE%\NO_OC_WinOptiMaze.pow
 del %HOMEDRIVE%\Balanced_WinOptiMaze.pow
