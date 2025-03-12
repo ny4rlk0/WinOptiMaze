@@ -37,6 +37,8 @@ cls
 echo "Resetting Windows Store"
 wsreset
 wsreset /i
+timeout /t 7
+taskkill /IM "WinStore.App.exe" /f
 cls
 echo "Resetting DNS Cache"
 ipconfig /flushdns
@@ -89,6 +91,8 @@ DISM /Online /Cleanup-Image /RestoreHealth
 cls
 echo "Resetting Theme"
 start /b "ThemeReset" "%HOMEDRIVE%\Windows\Resources\Themes\aero.theme"
+timeout /t 7
+taskkill /IM "SystemSettings.exe" /f
 cls
 echo "Setting Powershell Restrictions to Secure State"
 powershell 'Set-ExecutionPolicy restricted'
