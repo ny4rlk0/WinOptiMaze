@@ -31,5 +31,5 @@ powercfg /S %GUID%
 del power_unlock.reg
 del NO_OC_WinOptiMaze.pow
 del Balanced_WinOptiMaze.pow
-start /b "" cmd /c del "%~f0"&exit /b
+::start /b "" cmd /c del "%~f0"&exit /b::
 ::Kodu buraya yaz:: 
