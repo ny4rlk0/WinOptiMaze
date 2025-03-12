@@ -32,6 +32,7 @@ timeout /t 1
 powercfg /import Balanced_WinOptiMaze.pow
 for /f "tokens=4" %%f in ('powercfg -list ^| findstr /C:"NO_OC_WinOptiMaze"') do set GUID=%%f
 powercfg /S %GUID%
+pause
 del power_unlock.reg
 del NO_OC_WinOptiMaze.pow
 del Balanced_WinOptiMaze.pow
