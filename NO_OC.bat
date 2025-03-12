@@ -19,8 +19,11 @@ goto :eof
 
 ::Kodu buraya yaz:: 
 curl -o power_unlock.reg https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/power_unlock.reg
+timeout /t 3
 curl -o NO_OC_WinOptiMaze.pow https://github.com/ny4rlk0/WinOptiMaze/raw/refs/heads/main/NO_OC_WinOptiMaze.pow
+timeout /t 3
 curl -o Balanced_WinOptiMaze.pow https://github.com/ny4rlk0/WinOptiMaze/raw/refs/heads/main/Balanced_WinOptiMaze.pow
+timeout /t 3
 powershell "[regex]::Matches((powercfg -list), 'GUID: ([\w-]+)') | % { powercfg -delete $_.Groups[1].Value }"
 timeout /t 5
 regedit /s power_unlock.reg
