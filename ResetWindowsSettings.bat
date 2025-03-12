@@ -42,11 +42,18 @@ echo "Resetting DNS Cache"
 ipconfig /flushdns
 netsh interface tcp set global autotuninglevel=highlyrestricted
 cls
-echo "Fixing Windows Update"
+echo "Resetting Windows Update Settings"
 REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\WaasMedicSvc" /v Start /f /t REG_DWORD /d 2
 REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\wuauserv" /v Start /f /t REG_DWORD /d 2
 REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\UsoSvc" /v Start /f /t REG_DWORD /d 2
 REG ADD "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\DisableAntiSpyware" /v Start /f /t REG_DWORD /d 0
+cls
+echo "Resetting Windows Update Cache"
+net stop wuauserv
+net stop bits
+rmdir /S /Q %WinDir%\SoftwareDistribution
+net start wuauserv
+net start bits
 cls
 echo "Resetting Defender settings to default"
 powershell 'Set-MpPreference -DisableRealtimeMonitoring $false'
