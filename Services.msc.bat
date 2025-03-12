@@ -203,7 +203,6 @@ sc config LanmanServer start= auto
 sc config defragsvc start= demand
 sc config OneSyncSvc_74353 start= auto
 sc config SysMain start= demand
-sc config SysMain start= auto
 sc config EFS start= demand
 sc config CryptSvc start= auto
 sc config PlugPlay start= auto
