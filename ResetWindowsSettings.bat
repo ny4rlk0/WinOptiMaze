@@ -53,6 +53,7 @@ cls
 echo "Resetting Windows Update Cache"
 net stop wuauserv
 net stop bits
+net stop cryptsvc
 rmdir /S /Q %WinDir%\SoftwareDistribution
 ::md %WinDir%\system32\catroot2.old
 ::xcopy %systemroot%\system32\catroot2 %systemroot%\system32\catroot2.old /s
@@ -61,6 +62,7 @@ md %WinDir%\system32\catroot2
 icacls.exe %WinDir%\system32\catroot2 /grant "NT SERVICE\CryptSvc:(OI)(CI)(F)"
 net start wuauserv
 net start bits
+net start cryptsvc
 cls
 echo "Resetting Defender settings to default"
 powershell 'Set-MpPreference -DisableRealtimeMonitoring $false'
