@@ -55,8 +55,6 @@ net stop wuauserv
 net stop bits
 net stop cryptsvc
 rmdir /S /Q %WinDir%\SoftwareDistribution
-::md %WinDir%\system32\catroot2.old
-::xcopy %systemroot%\system32\catroot2 %systemroot%\system32\catroot2.old /s
 rmdir /S /Q %WinDir%\system32\catroot2
 md %WinDir%\system32\catroot2
 icacls.exe %WinDir%\system32\catroot2 /grant "NT SERVICE\CryptSvc:(OI)(CI)(F)"
