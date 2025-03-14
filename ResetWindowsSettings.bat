@@ -89,7 +89,6 @@ sfc /scannow
 cls
 echo "Repairing Windows OS..."
 echo "This might take a while (5-30 min)"
-sfc /scannow
 DISM /Online /Cleanup-Image /CheckHealth
 DISM /Online /Cleanup-Image /ScanHealth
 DISM /Online /Cleanup-Image /RestoreHealth
