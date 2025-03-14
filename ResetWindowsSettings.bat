@@ -54,8 +54,8 @@ echo "Resetting Windows Update Cache"
 net stop wuauserv
 net stop bits
 rmdir /S /Q %WinDir%\SoftwareDistribution
-md %WinDir%\system32\catroot2.old
-xcopy %systemroot%\system32\catroot2 %systemroot%\system32\catroot2.old /s
+::md %WinDir%\system32\catroot2.old
+::xcopy %systemroot%\system32\catroot2 %systemroot%\system32\catroot2.old /s
 rmdir /S /Q %WinDir%\system32\catroot2
 net start wuauserv
 net start bits
