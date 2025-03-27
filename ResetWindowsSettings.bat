@@ -19,7 +19,7 @@ goto :eof
 
 ::Kodu buraya yaz::
 echo "Resetting Host file"
-(echo https://github.com/ny4rlk0/WinOptiMaze) > "%SystemRoot%\System32\drivers\etc\hosts"
+(echo #https://github.com/ny4rlk0/WinOptiMaze) > "%SystemRoot%\System32\drivers\etc\hosts"
 cls
 echo "Resetting Group Policy Rules to Default"
 RD /S /Q "%WinDir%\System32\GroupPolicy"
