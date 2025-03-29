@@ -1,4 +1,5 @@
 ::github.com/ny4rlk0/WinOptiMaze
+::Detect Windows OS Version Vista 7 8 8.1 10 11
 @echo off
 for /f "tokens=4 delims=. " %%A in ('ver') do set OSVersionMajor=%%A
 for /f "tokens=5 delims=. " %%A in ('ver') do set OSVersionMinor=%%A
