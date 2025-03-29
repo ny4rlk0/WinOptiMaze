@@ -89,9 +89,9 @@ DISM /Online /Cleanup-Image /ScanHealth
 DISM /Online /Cleanup-Image /RestoreHealth
 cls
 echo "Resetting Theme"
-start /b "ThemeReset" "%HOMEDRIVE%\Windows\Resources\Themes\aero.theme"  >nul 2>&1
+start /b "ThemeReset" cmd /c "%HOMEDRIVE%\Windows\Resources\Themes\aero.theme" >nul 2>&1
 timeout /t 5
-start /b "ThemeReset" "%HOMEDRIVE%\Windows\Resources\Themes\dark.theme"  >nul 2>&1
+start /b "ThemeReset" cmd /c "%HOMEDRIVE%\Windows\Resources\Themes\dark.theme" >nul 2>&1
 taskkill /IM "SystemSettings.exe" /f  >nul 2>&1
 cls
 echo "Setting Powershell Restrictions to Secure State"
