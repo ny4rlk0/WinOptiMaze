@@ -1,21 +1,16 @@
-TITLE WinOptiMaze v0.1 
 @echo off
+TITLE WinOptiMaze v0.1 
 cls
 echo github.com/ny4rlk0/WinOptiMaze
 echo _______________________________________________________________
-if _%1_==_payload_  goto :payload
-
-:getadmin
-    echo %~nx0: Administrator permission level has been acquired.
-    echo %~nx0: Resetting Windows settings.
-    set vbs=%temp%\getadmin.vbs
-    echo Set UAC = CreateObject^("Shell.Application"^)                >> "%vbs%"
-    echo UAC.ShellExecute "%~s0", "payload %~sdp0 %*", "", "runas", 1 >> "%vbs%"
-    "%temp%\getadmin.vbs"
-    del "%temp%\getadmin.vbs"
-goto :eof
-
-:payload
+if "%~1" neq "skip" goto getAdmin
+:getAdmin
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+    echo %~nx0: Requesting Administrative privileges.
+	powershell -Command "Start-Process '%~f0' -ArgumentList 'skip' -Verb RunAs"
+	exit /b
+)
 
 ::Kodu buraya yaz::
 echo "Resetting Host file"
