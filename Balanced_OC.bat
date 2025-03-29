@@ -1,23 +1,19 @@
-TITLE Service WinOptiMaze v0.1
-cls
 @echo off
+TITLE WinOptiMaze v0.1 
+cls
 echo github.com/ny4rlk0/WinOptiMaze
 echo _______________________________________________________________
-if _%1_==_payload_  goto :payload
-
-:getadmin
-    echo %~nx0: Administrator permission level has been acquired.
+if "%~1" neq "skip" goto getAdmin
+:getAdmin
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+    echo %~nx0: Requesting Administrative privileges.
     echo %~nx0: Adjusting system for NO OVERCLOCK.
-    set vbs=%temp%\getadmin.vbs
-    echo Set UAC = CreateObject^("Shell.Application"^)                >> "%vbs%"
-    echo UAC.ShellExecute "%~s0", "payload %~sdp0 %*", "", "runas", 1 >> "%vbs%"
-    "%temp%\getadmin.vbs"
-    del "%temp%\getadmin.vbs"
-goto :eof
+	powershell -Command "Start-Process '%~f0' -ArgumentList 'skip' -Verb RunAs"
+	exit /b
+)
 
-:payload
-
-::Kodu buraya yaz:: 
+::Kodu buraya yaz::
 curl -o %HOMEDRIVE%\power_unlock.reg https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/power_unlock.reg
 curl -o %HOMEDRIVE%\NO_OC_WinOptiMaze.pow https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/NO_OC_WinOptiMaze.pow
 curl -o %HOMEDRIVE%\Balanced_WinOptiMaze.pow https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Balanced_WinOptiMaze.pow
