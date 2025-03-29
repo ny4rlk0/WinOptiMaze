@@ -30,10 +30,10 @@ netsh firewall reset
 netsh advfirewall reset
 cls
 echo "Resetting Windows Store"
-wsreset
-wsreset /i
+wsreset >nul 2>&1
+wsreset /i >nul 2>&1
 timeout /t 5
-taskkill /IM "WinStore.App.exe" /f
+taskkill /IM "WinStore.App.exe" /f  >nul 2>&1
 cls
 echo "Resetting DNS Cache"
 ipconfig /flushdns
@@ -89,10 +89,10 @@ DISM /Online /Cleanup-Image /ScanHealth
 DISM /Online /Cleanup-Image /RestoreHealth
 cls
 echo "Resetting Theme"
-start /b "ThemeReset" "%HOMEDRIVE%\Windows\Resources\Themes\aero.theme"
+start /b "ThemeReset" "%HOMEDRIVE%\Windows\Resources\Themes\aero.theme"  >nul 2>&1
 timeout /t 5
-start /b "ThemeReset" "%HOMEDRIVE%\Windows\Resources\Themes\dark.theme"
-taskkill /IM "SystemSettings.exe" /f
+start /b "ThemeReset" "%HOMEDRIVE%\Windows\Resources\Themes\dark.theme"  >nul 2>&1
+taskkill /IM "SystemSettings.exe" /f  >nul 2>&1
 cls
 echo "Setting Powershell Restrictions to Secure State"
 powershell 'Set-ExecutionPolicy restricted'
