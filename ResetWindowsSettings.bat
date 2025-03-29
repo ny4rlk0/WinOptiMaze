@@ -77,7 +77,7 @@ powershell 'Set-MpPreference -SignatureFallbackOrder "MicrosoftUpdateServer|MMPC
 powershell 'Set-MpPreference -QuarantinePurgeItemsAfterDelay 90'
 cls
 echo "Reinstall all Windows Apps"
-powershell "Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register """$($_.InstallLocation)\AppXManifest.xml"""}"
+powershell -Command "Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register """$($_.InstallLocation)\AppXManifest.xml"""}" 2>nul
 cls
 echo "Search For System Problems"
 sfc /scannow
