@@ -7,7 +7,7 @@ if "%~1" neq "skip" goto getAdmin
 :getAdmin
 net session >nul 2>&1
 if %errorlevel% neq 0 (
-    echo %~nx0: Requesting Administrative privileges.
+	echo %~nx0: Requesting Administrative privileges.
 	powershell -Command "Start-Process '%~f0' -ArgumentList 'skip' -Verb RunAs"
 	exit /b
 )
