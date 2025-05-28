@@ -23,9 +23,15 @@ mode con: cols=100 lines=30
 color F0
 cls
 echo ----------------------------------------------------------------------
-echo                    github.com/ny4rlk0/WinOptiMaze
+echo "     __        ___        ___        _   _ __  __                  ";
+echo "     \ \      / (_)_ __  / _ \ _ __ | |_(_)  \/  | __ _ _______    ";
+echo "      \ \ /\ / /| | '_ \| | | | '_ \| __| | |\/| |/ _` |_  / _ \   ";
+echo "       \ V  V / | | | | | |_| | |_) | |_| | |  | | (_| |/ /  __/   ";
+echo "        \_/\_/  |_|_| |_|\___/| .__/ \__|_|_|  |_|\__,_/___\___|   ";
+echo "                              |_|                                  ";
+echo "                   github.com/ny4rlk0/WinOptiMaze                  ";
 echo ----------------------------------------------------------------------
-echo        Choose an option:
+echo  Choose an option:
 echo ----------------------------------------------------------------------
 echo    1) Optimize Services.MSC
 echo    2) Reset Windows Settings
