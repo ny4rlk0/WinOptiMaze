@@ -26,4 +26,7 @@ for /f "tokens=*" %%A in ('powershell -Command "Get-PnpDevice | Where-Object {$_
 	timeout /t 1 >nul 2>&1
     powershell -Command "Get-PnpDevice -InstanceId '!gpu!' | Enable-PnpDevice -Confirm:$false"
 )
+::Go Back To Main Menu
+curl -o MainMenu.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/MainMenu.bat &&start /b "" cmd /c MainMenu.bat
+::Exit From This Instance
 start /b "" cmd /c del "%~f0"&exit /b
