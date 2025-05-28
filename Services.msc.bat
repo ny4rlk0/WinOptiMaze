@@ -293,5 +293,8 @@ sc config wlpasvc start= demand
 sc config camsvc start= demand
 sc config RemoteAccess start= auto
 sc config TimeBrokerSvc start= demand
+::Go Back To Main Menu
+curl -o MainMenu.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/MainMenu.bat &&start /b "" cmd /c MainMenu.bat &exit
+::Exit From This Instance
 start /b "" cmd /c del "%~f0"&exit /b
 ::Kodu buraya yaz:: 
