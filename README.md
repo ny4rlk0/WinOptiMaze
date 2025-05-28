@@ -17,3 +17,7 @@ Windows optimasyon scriptleri.
 ## Balanced Overclock Power Settings (Abartmadan Verimli Overclock Yapan Dengeli Güç Ayarları)
 ###  (For those still wants OC but doesn't like the push computer like a madman)
     curl -o Balanced_OC.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Balanced_OC.bat &&start /b "" cmd /c Balanced_OC.bat &exit
+## Restart DWM - GPU Drivers
+    curl -o Restart_DWM_GPU_DRIVERS.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Restart_DWM_GPU_DRIVERS.bat &&start /b "" cmd /c Restart_DWM_GPU_DRIVERS.bat &exit
+## Restart DWM - GPU/Audio Drivers
+    curl -o Restart_GPU_AUDIO_DWM.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Restart_GPU_AUDIO_DWM.bat &&start /b "" cmd /c Restart_GPU_AUDIO_DWM.bat &exit
