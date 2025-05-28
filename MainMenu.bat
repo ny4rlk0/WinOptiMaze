@@ -55,25 +55,26 @@ if "%choice%"=="8" call :_8
 goto menu
 
 :_1
-curl -o Services.msc.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Services.msc.bat &&start /b "" cmd /c Services.msc.bat
+curl -o "%SystemDrive%\Services.msc.bat" https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Services.msc.bat &&start /b "" cmd /c %SystemDrive%\Services.msc.bat
 goto menu
 :_2
-curl -o ResetWindowsSettings.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/ResetWindowsSettings.bat &&start /b "" cmd /c ResetWindowsSettings.bat
+curl -o "%SystemDrive%\ResetWindowsSettings.bat" https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/ResetWindowsSettings.bat &&start /b "" cmd /c %SystemDrive%\ResetWindowsSettings.bat
 goto menu
 :_3
-curl -o NO_OC.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/NO_OC.bat &&start /b "" cmd /c NO_OC.bat
+curl -o "%SystemDrive%\NO_OC.bat" https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/NO_OC.bat &&start /b "" cmd /c %SystemDrive%\NO_OC.bat
 goto menu
 :_4
-curl -o Balanced_OC.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Balanced_OC.bat &&start /b "" cmd /c Balanced_OC.bat
+curl -o "%SystemDrive%\Balanced_OC.bat" https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Balanced_OC.bat &&start /b "" cmd /c %SystemDrive%\Balanced_OC.bat
 goto menu
 :_5
-curl -o Restart_DWM_GPU_DRIVERS.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Restart_DWM_GPU_DRIVERS.bat &&start /b "" cmd /c Restart_DWM_GPU_DRIVERS.bat
+curl -o "%SystemDrive%\Restart_DWM_GPU_DRIVERS.bat" https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Restart_DWM_GPU_DRIVERS.bat &&start /b "" cmd /c %SystemDrive%\Restart_DWM_GPU_DRIVERS.bat
 goto menu
 :_6
-curl -o Restart_GPU_AUDIO_DWM.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Restart_GPU_AUDIO_DWM.bat &&start /b "" cmd /c Restart_GPU_AUDIO_DWM.bat
+curl -o "%SystemDrive%\Restart_GPU_AUDIO_DWM.bat" https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Restart_GPU_AUDIO_DWM.bat &&start /b "" cmd /c %SystemDrive%\Restart_GPU_AUDIO_DWM.bat
 goto menu
 :_7
 powershell -Command "irm https://get.activated.win | iex" >nul 2>&1
 goto menu
 :_8
-start /b "" cmd /c del "MainMenu.bat"&exit
+start /b "" cmd /c del "%SystemDrive%\MainMenu.bat"&exit /b
+goto menu
