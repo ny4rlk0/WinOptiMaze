@@ -5,7 +5,7 @@ Windows optimization scripts.
 
 Windows optimasyon scriptleri.
 <br><b>Sağdaki kopyalama butonuna tıklayarak yapmak istediğiniz işlevin kodunu kopyalayıp komut satırına yapıştırın.</b> <br>![IMG](https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/buton.png)
-<br><br><br> MainMenu.bat
+<br><br><br>
 ## Main Menu <br>(Ana Menü)
     curl -o MainMenu.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/MainMenu.bat &&start /b "" cmd /c MainMenu.bat &exit
 
