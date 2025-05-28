@@ -1,6 +1,8 @@
 ::start= <boot|system|auto|demand|disabled|delayed-auto>
 @echo off
 TITLE WinOptiMaze v0.1 
+mode con: cols=75 lines=24
+color F0
 cls
 echo github.com/ny4rlk0/WinOptiMaze
 echo _______________________________________________________________
