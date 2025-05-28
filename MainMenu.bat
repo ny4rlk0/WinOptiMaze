@@ -76,4 +76,4 @@ goto menu
 powershell -Command "irm https://get.activated.win | iex" >nul 2>&1
 goto menu
 :_8
-start /b "" cmd /c del "MainMenu.bat"&exit /b
+start /b "" cmd /c del "MainMenu.bat"&exit
