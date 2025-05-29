@@ -1,13 +1,13 @@
 @echo off >nul 2>&1
 TITLE WinOptiMaze v1.0 
-mode con: cols=100 lines=30
+mode con: cols=70 lines=25
 cls
 
 if "%~1" neq "skip" goto getAdmin
 :getAdmin
 net session >nul 2>&1
 if %errorlevel% neq 0 (
-	mode con: cols=100 lines=30
+	mode con: cols=70 lines=25
 	color F0
 	TITLE WinOptiMaze v1.0
 	cls
@@ -25,7 +25,7 @@ del "%SystemDrive%\Restart_DWM_GPU_DRIVERS.bat" >nul 2>&1
 del "%SystemDrive%\Restart_GPU_AUDIO_DWM.bat" >nul 2>&1
 cls
 :menu
-mode con: cols=100 lines=30
+mode con: cols=70 lines=25
 color F0
 cls
 echo ----------------------------------------------------------------------
