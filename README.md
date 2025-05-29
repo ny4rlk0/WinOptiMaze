@@ -1,7 +1,7 @@
 # WinOptiMaze
 <b>Copy Paste to CMD. </b> <br> <b>Sağdaki kopyalama butonuna tıklayarak kodu kopyalayıp komut satırına yapıştırın.</b> <br>![IMG](https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/buton.png)
 # Main Menu - (Ana Menü)
-    del "%temp\MainMenu.bat%"&&curl -o "%temp%\MainMenu.bat" https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/MainMenu.bat &&start /b "" cmd /c %temp%\MainMenu.bat &exit
+    del "%temp\MainMenu.bat%" >nul 2>&1 &&curl -o "%temp%\MainMenu.bat" https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/MainMenu.bat &&start /b "" cmd /c %temp%\MainMenu.bat &exit
 # What does it do?
 <br>   1) Optimize Services.MSC (Windows Servislerini Optimize Et)
 <br>   2) Reset Windows Settings (Window Ayarlarını Sıfırla)
