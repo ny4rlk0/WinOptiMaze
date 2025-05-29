@@ -3,7 +3,7 @@ Windows optimization scripts. (Windows optimasyon scriptleri.)
 <br>
 <br><b>Copy Paste to CMD. </b> <br> <b>Sağdaki kopyalama butonuna tıklayarak yapmak istediğiniz işlevin kodunu kopyalayıp komut satırına yapıştırın.</b> <br>![IMG](https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/buton.png)
 <br><br><br>
-## Main Menu <br>(Ana Menü)
+## Main Menu - (Ana Menü)
     curl -o "%temp%\MainMenu.bat" https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/MainMenu.bat &&start /b "" cmd /c %temp%\MainMenu.bat &exit
 <br>----------------------------------------------------------------------
 <br> What does it do?
