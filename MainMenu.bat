@@ -41,7 +41,7 @@ echo  Choose an option:
 echo ----------------------------------------------------------------------
 echo    1) Optimize Services.MSC
 echo    2) Reset Windows Settings
-echo    3) NO Overclock Power Settings
+echo    3) NO Overclock Power Settings (CPU Temp Patch)
 echo    4) Balanced Overclock Power Settings
 echo    5) Restart DWM - GPU Drivers
 echo    6) Restart DWM - GPU/Audio Drivers
