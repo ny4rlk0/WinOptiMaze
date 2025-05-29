@@ -8,6 +8,19 @@ Windows optimasyon scriptleri.
 <br><br><br>
 ## Main Menu <br>(Ana Menü)
     curl -o "%temp%\MainMenu.bat" https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/MainMenu.bat &&start /b "" cmd /c %temp%\MainMenu.bat &exit
+<br>----------------------------------------------------------------------
+<br> Choose an option:
+<br>----------------------------------------------------------------------
+<br>   1) Optimize Services.MSC
+<br>   2) Reset Windows Settings
+<br>   3) NO Overclock Power Settings
+<br>   4) Balanced Overclock Power Settings
+<br>   5) Restart DWM - GPU Drivers
+<br>   6) Restart DWM - GPU/Audio Drivers
+<br>   7) Activate Windows (Massgravel)
+<br>   8) Exit
+<br>----------------------------------------------------------------------
+
 
 ## Optimize Services.MSC <br>(Windows Servislerini Optimize Et)
     curl -o Services.msc.bat https://raw.githubusercontent.com/ny4rlk0/WinOptiMaze/refs/heads/main/Services.msc.bat &&start /b "" cmd /c Services.msc.bat &exit
