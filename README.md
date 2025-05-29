@@ -11,3 +11,5 @@
 <br>   6) Restart DWM - GPU/Audio Drivers (Masaüstü Pencere Yöneticisi - Ekran Kartı/SES Sürücülerini Yeniden Başlat)
 <br>   7) Activate Windows (Massgravel)
 <br>   8) Exit
+# Screen Shot
+![image](https://github.com/user-attachments/assets/f1d0741d-8749-4a2c-82c3-7b306f03a999)
