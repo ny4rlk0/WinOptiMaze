@@ -17,6 +17,12 @@ if %errorlevel% neq 0 (
 	::pause >nul 2>&1
 	exit /b
 )
+del "%SystemDrive%\Services.msc.bat"
+del "%SystemDrive%\ResetWindowsSettings.bat"
+del "%SystemDrive%\NO_OC.bat"
+del "%SystemDrive%\Balanced_OC.bat"
+del "%SystemDrive%\Restart_DWM_GPU_DRIVERS.bat"
+del "%SystemDrive%\Restart_GPU_AUDIO_DWM.bat"
 cls
 :menu
 mode con: cols=100 lines=30
