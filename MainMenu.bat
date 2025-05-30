@@ -45,7 +45,7 @@ echo    3) NO Overclock Power Settings (CPU Temp Patch)
 echo    4) Balanced Overclock Power Settings
 echo    5) Restart DWM - GPU Drivers
 echo    6) Restart DWM - GPU/Audio Drivers
-echo    7) Activate Windows (Massgravel)
+echo    7) Activate Windows - Office (Massgravel)
 echo    8) Exit
 echo ----------------------------------------------------------------------
 set /p choice="Enter your choice: "
