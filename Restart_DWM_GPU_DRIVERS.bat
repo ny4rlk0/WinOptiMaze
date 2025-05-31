@@ -1,14 +1,29 @@
 @echo off
 setlocal enabledelayedexpansion
-TITLE WinOptiMaze v0.1 - GPU Drivers and DWM Restarter
+TITLE WinOptiMaze v1.0 - GPU Drivers and DWM Restarter
 cls
-echo github.com/ny4rlk0/WinOptiMaze
-echo _______________________________________________________________
+mode con: cols=70 lines=22
+color F0
+cls
+echo ----------------------------------------------------------------------
+echo "     __        ___        ___        _   _ __  __                  ";
+echo "     \ \      / (_)_ __  / _ \ _ __ | |_(_)  \/  | __ _ _______    ";
+echo "      \ \ /\ / /| | '_ \| | | | '_ \| __| | |\/| |/ _` |_  / _ \   ";
+echo "       \ V  V / | | | | | |_| | |_) | |_| | |  | | (_| |/ /  __/   ";
+echo "        \_/\_/  |_|_| |_|\___/| .__/ \__|_|_|  |_|\__,_/___\___|   ";
+echo "                              |_|                                  ";
+echo "                   github.com/ny4rlk0/WinOptiMaze                  ";
+echo ----------------------------------------------------------------------
+echo            Reset Graphics Driver and Desktop Window Manager
+echo ----------------------------------------------------------------------
 net session >nul 2>&1
 if %errorLevel% neq 0 (
-    echo Requesting administrator privileges...
-    powershell -Command "Start-Process '%~0' -Verb RunAs"
-    exit /b
+	mode con: cols=70 lines=22
+	color F0
+	cls
+    	echo Requesting administrator privileges...
+    	powershell -Command "Start-Process '%~0' -Verb RunAs"
+    	exit /b
 )
 echo Restarting DWM
 powershell -Command "Stop-Process -Name dwm -Force"
