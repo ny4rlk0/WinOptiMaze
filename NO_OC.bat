@@ -1,5 +1,5 @@
 @echo off
-TITLE WinOptiMaze v0.1 
+TITLE WinOptiMaze v1.0 
 cls
 mode con: cols=70 lines=22
 color F0
