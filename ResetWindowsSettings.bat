@@ -13,7 +13,7 @@ echo "        \_/\_/  |_|_| |_|\___/| .__/ \__|_|_|  |_|\__,_/___\___|   ";
 echo "                              |_|                                  ";
 echo "                   github.com/ny4rlk0/WinOptiMaze                  ";
 echo ----------------------------------------------------------------------
-echo            Reset Windows, Group Policy settings to default!
+echo            Reset Windows/Group Policy settings to default!
 echo ----------------------------------------------------------------------
 if "%~1" neq "skip" goto getAdmin
 :getAdmin
